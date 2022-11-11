@@ -7,7 +7,8 @@
 :root {
   /* Brand Colors */
   --blue-aquamarine: #47cfac;
-
+  --grey-hero: #e6e9ed;
+  --deep-gray: #22272d;
   /* Font Sizes */
   --title: 2rem;
   --subtitle: 1.8rem;
@@ -28,6 +29,10 @@ a {
   text-decoration: none;
   display: inline;
   color: black;
+}
+.grid-container {
+  max-width: 980px;
+  margin: auto;
 }
 
 /* BEM */
@@ -119,4 +124,96 @@ nav .profile-link a {
 }
 button:hover {
   transform: scale(1.1);
+}
+
+/* BLOGS PAGE */
+
+.blogs-main {
+  display: grid;
+}
+.blogs-hero-container {
+  padding: 40px 50px 40px;
+  background-color: var(--grey-hero);
+}
+.blogs-hero-new {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+}
+.blogs-hero-new h3 {
+  margin: 12px 0;
+  font-size: var(--small);
+}
+.blogs-news-img-container {
+  grid-column: 1;
+}
+.blogs-news-img-container img {
+  width: 90%;
+  grid-column: 2;
+  border-radius: 6px;
+}
+.blogs-news-info-container p, .blogs-news-info-container h2 {
+  margin-bottom: 35px;
+}
+.blogs-news-info-container h2 {
+  font-size: var(--subtitle);
+}
+.blogs-news-info-container p {
+  font-size: var(--small);
+  line-height: 1.6;
+}
+.blogs-button {
+  border: 2px solid var(--blue-aquamarine);
+  padding: 12px 20px;
+  font-size: var(--small);
+  font-weight: bold;
+}
+.blogs-button:hover { 
+  background-color: var(--blue-aquamarine);
+}
+.blogs-post-container {
+  padding: 0 50px 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.blogs-post-container h2 {
+  margin: 36px 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: var(--title);
+}
+.post-container {
+  max-width: 30%;
+  margin-bottom: 50px;
+  padding: 12px;
+  display: inline-block;
+}
+.post-container img {
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+.post-container h3 {
+  font-size: var(--small);
+}
+.post-container p {
+  margin: 16px 0 36px;
+  line-height: 1.6;
+  font-size: var(--xs);
+  text-align: left;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: var(--deep-gray);
+  border-top: 35px solid var(--blue-aquamarine);
+  text-align: center;
+}
+footer p {
+  color: whitesmoke;
+  margin-top: 25px;
+  font-size: var(--small);
 }
